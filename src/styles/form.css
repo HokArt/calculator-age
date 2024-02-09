@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 94%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  background-color: hsl(0, 0%, 100%);
+  padding: 50px 40px;
+  display: inherit;
+  border-radius: 4% 4% 35% 4%;
+  /* min-width: 300px; */
+}
+.form-wrapper .input-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+}
+.form-wrapper .input-wrapper input {
+  cursor: pointer;
+  border: 1px solid hsl(0, 0%, 94%);
+  border-radius: 3px;
+  background-color: white;
+  outline: none;
+  height: 30px;
+  text-align: center;
+  font-weight: 900;
+  /* margin-right: 10px; */
+}
+.form-wrapper .input-wrapper input::-moz-placeholder {
+  font-weight: 800;
+  padding: 7px;
+}
+.form-wrapper .input-wrapper input::placeholder {
+  font-weight: 800;
+  padding: 7px;
+}
+.form-wrapper .input-wrapper .day, .form-wrapper .input-wrapper .month, .form-wrapper .input-wrapper .year {
+  display: grid;
+  grid-template-columns: repeat(1, 75px);
+  font-size: smaller;
+  font-weight: 700;
+  color: hsl(0, 1%, 44%);
+}
+.form-wrapper .img-wrapper img {
+  background-color: hsl(259, 100%, 65%);
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  position: fixed;
+}
+.form-wrapper .img-wrapper img:hover {
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+  background-color: hsl(0, 0%, 8%);
+}
+.form-wrapper .img-wrapper::before {
+  content: "";
+  height: 1px;
+  width: 85%;
+  position: relative;
+  left: 0;
+  top: 7px;
+  background-color: hsl(0, 0%, 94%);
+  display: inline-block;
+}
+.form-wrapper .results-wrapper {
+  font-size: 32px;
+  font-family: "Poppins";
+}
+.form-wrapper .results-wrapper strong {
+  color: hsl(259, 100%, 65%);
+}
+
+@media screen and (max-width: 500px) {
+  .form-wrapper .results-wrapper {
+    font-size: 25px;
+  }
+
+  .form-wrapper .input-wrapper {
+    padding-bottom: 20px;
+  }
+
+  .form-wrapper .results-wrapper {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .form-wrapper .results-wrapper {
+    font-size: 20px;
+  }
+
+  .form-wrapper .input-wrapper {
+    padding-bottom: 20px;
+  }
+
+  .form-wrapper .results-wrapper {
+    padding-top: 20px;
+  }
+
+  .form-wrapper .img-wrapper img {
+    position: fixed;
+    align-items: center;
+    left: 43%;
+  }
+
+  .form-wrapper .img-wrapper::before {
+    width: 100%;
+  }
+}
